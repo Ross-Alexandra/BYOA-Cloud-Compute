@@ -11,14 +11,16 @@ https://docs.djangoproject.com/en/2.1/ref/settings/
 """
 
 import os
+
 try:
     from .secret_key import SECRET_KEY
 except ImportError:
     SETTINGS_DIR = os.path.abspath(os.path.dirname(__file__))
-    with open(os.path.join(SETTINGS_DIR, 'secret_key.py'), 'w+') as keyfile:
+    with open(os.path.join(SETTINGS_DIR, "secret_key.py"), "w+") as keyfile:
         print("First run: generating secret key, this shouldn't take long.")
 
         from django.core.management.utils import get_random_secret_key
+
         SECRET_KEY = get_random_secret_key()
         keyfile.write(f"SECRET_KEY = '{SECRET_KEY}'")
 
@@ -32,7 +34,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['localhost']
+ALLOWED_HOSTS = ["localhost"]
 
 
 # Application definition
@@ -116,10 +118,8 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.9/howto/static-files/
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
-STATIC_URL = '/static/'
+STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")
+STATIC_URL = "/static/"
 
 # Extra places for collectstatic to find static files.
-STATICFILES_DIRS = (
-    os.path.join(BASE_DIR, 'static'),
-)
+STATICFILES_DIRS = (os.path.join(BASE_DIR, "static"),)
