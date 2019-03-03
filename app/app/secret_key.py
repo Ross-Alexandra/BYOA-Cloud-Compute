@@ -1,1 +1,0 @@
-SECRET_KEY = 'yoa=3=^=%m##yp#u^0x3z4q2$#$#$tl*lp-&pa%^o(g3^@#w!6'
