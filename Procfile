@@ -1,1 +1,1 @@
-web: docker-compose up
+web: gunicorn application:app
