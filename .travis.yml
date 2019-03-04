@@ -3,25 +3,25 @@ sudo: required
 language: python
 python: '3.6'
 services:
- - docker
+- docker
 
 before_install:
 # login to docker reqestries (dockerhub + heroku)
- - echo "$ DOCKER_PASSWORD" | docker login -u "$ DOCKER_USERNAME" --password-stdin
+- echo "$ DOCKER_PASSWORD" | docker login -u "$ DOCKER_USERNAME" --password-stdin
 install:
- - pip install -r requirements.txt
- - pip install -r requirements-dev.txt
+- pip install -r requirements.txt
+- pip install -r requirements-dev.txt
 script:
- - pytest --cov=app
- - black app --check
- - isort -rc --check .
- - docker build -t ross3834/seng371p2 .
+- pytest --cov=app
+- black app --check
+- isort -rc --check .
+- docker build -t ross3834/seng371p2 .
 after_success:
- - codecov
+- codecov
 deploy:
   provider: script
   script:
-   # Push to dockerhub
+  # Push to dockerhub
   docker push ross3834seng371p2;
   branch: master 
   #provider: heroku
