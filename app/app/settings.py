@@ -12,7 +12,7 @@ https://docs.djangoproject.com/en/2.1/ref/settings/
 
 import os
 
-import djagno_heroku
+import django_heroku
 
 # Get the secret key
 try:
@@ -59,7 +59,7 @@ MIDDLEWARE = [
     "django.contrib.auth.middleware.AuthenticationMiddleware",
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
-    "whitenoise.middleware.WhiteNoise.Middleware",
+    "whitenoise.middleware.WhiteNoiseMiddleware",
 ]
 
 ROOT_URLCONF = "app.urls"
@@ -133,4 +133,5 @@ STATICFILES_DIRS = (os.path.join(BASE_DIR, "static"),)
 
 STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 
+# Must be at end of settings.
 django_heroku.settings(locals())
