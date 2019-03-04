@@ -1,1 +1,1 @@
-web: gunicorn app.wsgi
+web: docker-compose up
