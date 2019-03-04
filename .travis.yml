@@ -22,7 +22,7 @@ deploy:
   provider: script
   script:
   # Push to dockerhub
-  docker push ross3834seng371p2;
+   docker push ross3834/seng371p2;
   branch: master 
   #provider: heroku
   #api_key:
