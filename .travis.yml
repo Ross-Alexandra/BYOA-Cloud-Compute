@@ -17,7 +17,7 @@ install:
 - pip install -r requirements-dev.txt
 
 script:
-- pytest --cov=app
+- pytest app --cov=app
 - black app --check
 - isort -rc --check .
 - docker build -t ross3834/seng371p2 .
