@@ -6,4 +6,4 @@ class test_accounts_page(TestCase):
     def test_getLogin(self):
         client = Client()
         response = client.get("http://127.0.0.1:8000/accounts/login/")
-        self.assertEqual(response.status_code, 200)
+        assert response.status_code == 200
