@@ -108,3 +108,5 @@ secret_key.py
 app/app/migrations/
 staticfiles/
 
+# Pycharm
+.idea/
