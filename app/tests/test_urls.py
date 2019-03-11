@@ -13,6 +13,7 @@ class test_accounts_page(TestCase):
         response = client.get("http://127.0.0.1:8000", follow=True)
         SimpleTestCase().assertRedirects(response, "/accounts/login/?next=/")
 
+
 class test_signup_page(TestCase):
     def test_getSignUp(self):
         client = Client()
