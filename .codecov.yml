@@ -9,4 +9,4 @@ ignore:
   - "ccf/app/urls.py"
   - "ccf/app/wsgi.py"
   - "ccf/app/__init__.py"
-  - "ccf/app/settings.py"
+  - "ccf/app/settings/prod.py"
