@@ -105,7 +105,7 @@ venv.bak/
 
 # Django
 secret_key.py
-app/app/migrations/
+ccf/app/migrations/
 staticfiles/
 
 # Pycharm
