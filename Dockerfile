@@ -9,4 +9,4 @@ WORKDIR /code
 COPY requirements.txt /code/
 RUN pip install -r requirements.txt
 COPY . /code/
-CMD ["app/start_server.sh"]
+CMD ["ccf/start_server.sh"]
