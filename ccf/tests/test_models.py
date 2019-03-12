@@ -1,6 +1,5 @@
 import django
 import pytest
-
 from app.models import Jobs
 
 
