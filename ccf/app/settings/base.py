@@ -12,8 +12,6 @@ https://docs.djangoproject.com/en/2.1/ref/settings/
 
 import os
 
-# import django_heroku
-
 # Get the secret key
 try:
     from .secret_key import SECRET_KEY
@@ -113,6 +111,3 @@ LOGIN_REDIRECT_URL = "/"
 
 # Extra places for collectstatic to find static files.
 STATICFILES_DIRS = (os.path.join(BASE_DIR, "static"),)
-
-# Must be at end of settings.
-# django_heroku.settings(locals())
