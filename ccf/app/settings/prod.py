@@ -15,7 +15,7 @@ db_host = os.environ.get("DB_HOST")
 # prod settings, so use the dev database.
 if any([db_user is None, db_password is None, db_host is None]):
     print(
-        "Unable to use prod database settings as not all evironmental variables are set."
+        "Unable to use prod database settings as not all environmental variables are set."
     )
     print("Using default dev database.")
     from .dev import DATABASES
