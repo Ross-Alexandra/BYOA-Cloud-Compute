@@ -107,5 +107,8 @@ venv.bak/
 secret_key.py
 staticfiles/
 
+# Pycharm
+.idea/
+
 # Visual Studio
 .vs/
