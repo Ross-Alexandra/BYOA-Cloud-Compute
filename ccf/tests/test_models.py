@@ -28,3 +28,10 @@ def test_create_job_without_datastore_link_raises_integrity_error():
 
     with pytest.raises(django.db.utils.IntegrityError):
         job.save()
+
+
+@pytest.mark.django_db()
+def test_create_job_without_finished_auto_fills_field_to_false():
+    job = Jobs(dockerfile="This is a dockerfile", datastore_link="abc.com")
+
+    assert not job.finished
